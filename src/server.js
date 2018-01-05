@@ -1,7 +1,11 @@
-var PROTO_PATH = __dirname + '/protos/helloworld.proto';
+import grpc from 'grpc';
 
-var grpc = require('grpc');
-var hello_proto = grpc.load(PROTO_PATH).helloworld;
+const PROTO_PATH = __dirname + '/protos/helloworld.proto';
+
+let hello_proto = grpc
+    .load(PROTO_PATH)
+    .helloworld;
+
 
 /**
  * Implements the SayHello RPC method.
@@ -17,7 +21,7 @@ function sayHello(call, callback) {
  * sample server port
  */
 function main() {
-    var server = new grpc.Server();
+    let server = new grpc.Server();
     server.addService(hello_proto.Greeter.service, {
         sayHello: sayHello
     });
