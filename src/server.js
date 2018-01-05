@@ -1,6 +1,7 @@
 import grpc from 'grpc';
+import path from 'path';
 
-const PROTO_PATH = __dirname + '/protos/helloworld.proto';
+const PROTO_PATH = path.join(__dirname, '/../protos/helloworld.proto');
 
 let hello_proto = grpc
     .load(PROTO_PATH)
