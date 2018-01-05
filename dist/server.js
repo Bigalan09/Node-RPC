@@ -12,8 +12,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PROTO_PATH = _path2.default.join(__dirname, '/../protos/helloworld.proto');
 
-console.log(PROTO_PATH);
-
 var hello_proto = _grpc2.default.load(PROTO_PATH).helloworld;
 
 /**

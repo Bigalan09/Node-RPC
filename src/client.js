@@ -22,5 +22,4 @@ function main() {
             console.log('Greeting:', response.message);
         });
 }
-
 main();
